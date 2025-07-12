@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Portfolio Website</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        body{
+            background-color: rgb(58, 59, 59);
+        }
+        #w{
+            text-align: center;
+            font-size:xx-large;
+            padding: 20px 20px;
+            background-color: rgb(39, 52, 29);
+            color: #fff;
+            font-size: 48px;
+            text-align: center;
+            text-shadow: 
+                0 0 5px #fff, 
+                0 0 10px #24f5a9, 
+                0 0 20px #24f5a9, 
+                0 0 40px #24f5a9;           
+        }
+        #n{
+            text-align: center;
+            padding: 10px 5px ;
+            font-size: x-large;
+            background-color:rgb(86, 82, 55);
+        }
+        a{
+            padding: 20px;
+            color: rgb(120, 120, 110);
+        }
+        .info{
+            font-size: x-large;
+            background-color: darkgray;
+            margin: 10px;
+            padding: 10px 50px;
+            border-radius: 20px;
+            border : 5px solid black;
+        }
+        ul {
+            list-style-type: disc;
+        }
+      
+        footer{
+            font-size: xx-large;
+            text-align: center;
+            background-color: aquamarine;
+            padding: 20px;
+        }
+        input {
+            height: 20px;
+            font-size: large;
+            width: 50%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        input[type="submit"]{
+                font-size: large;
+                width: auto;
+                padding: 0px 20px;
+                margin-top: 10px;
+                cursor: pointer;
+                height: 40px;
+        }
+        #x{
+            text-align: center;
+            font-size: large;
+            background-color: rgb(136, 135, 135);
+            margin: 10px 450px 0px 450px ;
+            padding:10px;
+            border-radius: 10px;
+        }
+        #y{
+            font-size: large;
+            padding: 20px;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div id="w"><h1>Welcome to My Portfolio</h1></div>
+    <nav id="n">
+        <a href="#a">About me</a>
+        <a href="#b">Skills</a>
+        <a href="#c">Certifications</a>
+        <a href="#d">Contacts</a>
+    </nav>
+    <div id="x"><h1>Let us know who visited the site:</h1>
+    <div id="y"><h2>
+        <form action="submit_form.php" method="post">
+            <label for="name"><b>Name</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="occupation"><b>Occupation   :</b></label>
+            <input type="text" id="occupation" name="occupation" required><br>
+            <label for="mobile"><b>Mobile no.  &nbsp;:</b></label>
+            <input type="text" id="mobile" name="mobile" required><br>
+            <input type="submit" id="submit" name="Submit">
+        </form></h2>
+    </div></div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Thank you. Your submission has been recorded.");
+        });
+    </script>
+    <div class="info" id="a">
+    <ul>
+        <h3>About me</h3>
+        <li>Name : Harshraj Singh Rao</li>
+        <li>College : Sir Padampat Singhania University, Udaipur</li>
+        <li>Degree : Btech CSE Cyber Security</li>
+        <li>Address : Udaipur, Rajasthan</li>
+    </ul>
+    </div>
+    <div class="info" id="b">
+    <ul>
+        <h3>Skills</h3>
+        <li>C, C++, Python</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Ethical Hacking</li>
+    </ul>
+    </div>
+    <div class="info" id="c">
+    <ul>
+        <h3>Certifications</h3>
+        <li>NPTEL Certification for COMPUTER NETWORKS AND INTERNET PROTOCOL</li>
+        <li>Tudedude Certification for Ethical Hacking (hands on) Course.</li>
+    </ul>
+    </div>
+    <div class="info" id="d">
+        <h3>Contacts</h3>
+        <li><a href="https://wa.me/9509115293">Whatsapp</a></li>
+        <li><a href="https://www.instagram.com/harshrao_009/">Instagram</a></li>
+        <li><a href="mailto:raoharshrajsingh009@gmail.com">Gmail</a></li>
+        <li><a href="https://github.com/HSR-009">Github</a></li>
+    </ul>
+    </div>
+    <footer>
+        Thank you for visiting! &copy; All Rights Reserved.
+    </footer>
+</body>
+</html>
