@@ -1,0 +1,35 @@
+ <!-- write a program to create a dynamic list where user can add and remove item by button -->
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Dynamic List</title>
+    
+</head>
+<body>
+    <h2>Dynamic List</h2>
+    <input type="text" id="item" placeholder="Enter item">
+    <button onclick="addItem()">Click to add</button>
+    <ul id="itemList"></ul>
+
+    <script>
+        function addItem() {
+            const item = document.getElementById('item');
+            const itemText = item.value;
+
+            const li = document.createElement('li');
+            li.textContent = itemText;
+
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.onclick = function() {
+                this.parentElement.remove();
+            };
+
+            li.appendChild(removeButton);
+            document.getElementById('itemList').appendChild(li);
+
+            item.value = '';
+        }
+    </script>
+</body>
+</html>
