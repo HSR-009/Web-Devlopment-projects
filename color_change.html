@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Background Changer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 50px;
+      transition: background 0.3s ease;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+    .red { background: red; }
+    .green { background: green; }
+    .blue { background: blue; }
+    .yellow { background: goldenrod; }
+  </style>
+</head>
+<body>
+  <h2>Click a Button to Change Background Color</h2>
+
+  <button class="btn red" onclick="changeColor('red')">Red</button>
+  <button class="btn green" onclick="changeColor('green')">Green</button>
+  <button class="btn blue" onclick="changeColor('blue')">Blue</button>
+  <button class="btn yellow" onclick="changeColor('yellow')">Yellow</button>
+
+  <script>
+    function changeColor(color) {
+      document.body.style.background = color;
+    }
+  </script>
+</body>
+</html>
